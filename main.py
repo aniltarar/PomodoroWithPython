@@ -11,14 +11,14 @@ lap = int(input("Kaç tur pomodoro yapmak istersiniz ? :"))
 workMin = int(input("Her bir tur pomodoro kaç dakika olsun ? :"))
 pauseMin = int(input("Her bir mola kaç dakika olsun ? :"))
 while True:
-    time.sleep(workMin)
+    time.sleep(workMin*60)
     count += 1
     notification.notify(
         title = "Pomodoro Başladı , iyi çalışmalar",
         message = "Pomodoro Turu Başarıyla Tamamlandı. Tamamlanan Tur Sayısı :" + str(count) + " Şimdi Mola Vakti",
 
     )
-    time.sleep(pauseMin)
+    time.sleep(pauseMin*60)
     notification.notify(
         title = "Mola süresi doldu.",
         message = "Çalışmaya geri dön ! ",
